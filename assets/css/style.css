@@ -1,52 +1,132 @@
 /*==================================================
-  SHAHINSHAH.IN
-  Version : 1.1
+SHAHINSHAH.IN
+Version 1.0
 ==================================================*/
 
+/*========== VARIABLES ==========*/
 
-/*==================================================
-  COLOR SYSTEM
-==================================================*/
-/*==================================================
-  HEADER
-==================================================*/
+:root{
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+
+    --text:#0f172a;
+    --muted:#64748b;
+
+    --background:#f8fafc;
+    --surface:#ffffff;
+
+    --border:#e2e8f0;
+
+    --radius:16px;
+
+    --shadow:0 10px 30px rgba(15,23,42,.08);
+
+}
+
+
+/*========== RESET ==========*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Inter',sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+}
+
+img{
+
+    max-width:100%;
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+/*========== CONTAINER ==========*/
+
+.container{
+
+    width:min(1100px,92%);
+    margin:auto;
+
+}
+
+
+/*========== HEADER ==========*/
 
 header{
 
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:100;
 
-    background:rgba(255,255,255,.95);
-    backdrop-filter:blur(10px);
+    background:rgba(255,255,255,.92);
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    padding:20px 8%;
+    backdrop-filter:blur(12px);
 
     border-bottom:1px solid var(--border);
 
 }
 
-.logo{
+header .container{
 
-    font-size:1.8rem;
-    font-weight:700;
-    letter-spacing:-0.5px;
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 0;
 
 }
 
 
-/*==================================================
-  NAVIGATION
-==================================================*/
+/*========== LOGO ==========*/
+
+.logo{
+
+    font-size:1.6rem;
+
+    font-weight:700;
+
+    letter-spacing:-.5px;
+
+}
+
+
+/*========== NAVIGATION ==========*/
 
 nav{
 
     display:flex;
-    align-items:center;
+
     gap:32px;
 
 }
@@ -57,8 +137,6 @@ nav a{
 
     font-weight:500;
 
-    color:var(--text);
-
     transition:.25s;
 
 }
@@ -68,8 +146,6 @@ nav a:hover{
     color:var(--primary);
 
 }
-
-/* underline animation */
 
 nav a::after{
 
@@ -95,112 +171,332 @@ nav a:hover::after{
     width:100%;
 
 }
-:root{
 
-    --primary:#2563eb;
-    --primary-dark:#1d4ed8;
+nav .active{
 
-    --text:#1e293b;
-    --muted:#64748b;
-
-    --background:#f8fafc;
-    --surface:#ffffff;
-
-    --border:#e2e8f0;
-
-    --shadow:0 10px 25px rgba(15,23,42,.08);
-
-    --radius:14px;
+    color:var(--primary);
 
 }
 
-/*==================================================
-  HERO
-==================================================*/
+
+/*========== HERO ==========*/
 
 .hero{
 
-    max-width:1100px;
-    margin:120px auto 80px;
-    padding:0 40px;
+    padding:110px 0 90px;
+
     text-align:center;
+
+}
+
+.eyebrow{
+
+    display:inline-block;
+
+    background:#dbeafe;
+
+    color:var(--primary);
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
 
 }
 
 .hero h1{
 
-    font-size:4.2rem;
+    font-size:4rem;
+
     line-height:1.1;
-    margin-bottom:24px;
-    font-weight:700;
+
     letter-spacing:-2px;
 
-}
-
-.hero h2{
-
-    font-size:1.4rem;
-    color:var(--primary);
-    font-weight:500;
-    margin-bottom:30px;
+    margin-bottom:25px;
 
 }
 
-.hero p{
+.hero-text{
 
     max-width:760px;
+
     margin:auto;
-    font-size:1.25rem;
-    line-height:1.9;
+
+    color:var(--muted);
+
+    font-size:1.2rem;
+
+}
+
+
+/*========== BUTTONS ==========*/
+
+.hero-buttons{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn{
+
+    padding:15px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-2px);
+
+}
+
+.btn-secondary{
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+}
+
+.btn-secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+
+/*========== FEATURES ==========*/
+
+.features{
+
+    padding:60px 0 100px;
+
+}
+
+.features h2{
+
+    text-align:center;
+
+    font-size:2.3rem;
+
+    margin-bottom:10px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    margin-bottom:55px;
+
+}
+
+
+/*========== CARDS ==========*/
+
+.card-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:28px;
+
+}
+
+.card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.card-icon{
+
+    font-size:2.2rem;
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    margin-bottom:15px;
+
+}
+
+.card p{
+
+    color:var(--muted);
+
+    margin-bottom:25px;
+
+}
+
+.card span{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+
+/*========== QUOTE ==========*/
+
+.quote{
+
+    padding:40px 0 90px;
+
+}
+
+blockquote{
+
+    text-align:center;
+
+    font-size:1.6rem;
+
+    font-weight:300;
+
+    max-width:800px;
+
+    margin:auto;
+
     color:var(--muted);
 
 }
 
-/*==================================================
-  RESET
-==================================================*/
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+/*========== FOOTER ==========*/
 
+footer{
 
-/*==================================================
-  GLOBAL
-==================================================*/
+    border-top:1px solid var(--border);
 
-html{
-
-    scroll-behavior:smooth;
+    background:white;
 
 }
 
-body{
+.footer-content{
 
-    font-family:'Inter',sans-serif;
+    display:flex;
 
-    background:var(--background);
+    justify-content:space-between;
 
-    color:var(--text);
+    align-items:center;
 
-    line-height:1.6;
+    padding:35px 0;
 
-}
+    flex-wrap:wrap;
 
-a{
-
-    color:inherit;
-
-    text-decoration:none;
+    gap:20px;
 
 }
 
-img{
+.footer-content h3{
 
-    max-width:100%;
+    margin-bottom:6px;
 
-    display:block;
+}
+
+.footer-content p{
+
+    color:var(--muted);
+
+}
+
+
+/*========== RESPONSIVE ==========*/
+
+@media(max-width:850px){
+
+    header .container{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    nav{
+
+        gap:18px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .hero{
+
+        padding:80px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero-text{
+
+        font-size:1rem;
+
+    }
+
+    .footer-content{
+
+        text-align:center;
+
+        justify-content:center;
+
+    }
 
 }
