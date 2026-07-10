@@ -7,7 +7,94 @@
 /*==================================================
   COLOR SYSTEM
 ==================================================*/
+/*==================================================
+  HEADER
+==================================================*/
 
+header{
+
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 8%;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.logo{
+
+    font-size:1.8rem;
+    font-weight:700;
+    letter-spacing:-0.5px;
+
+}
+
+
+/*==================================================
+  NAVIGATION
+==================================================*/
+
+nav{
+
+    display:flex;
+    align-items:center;
+    gap:32px;
+
+}
+
+nav a{
+
+    position:relative;
+
+    font-weight:500;
+
+    color:var(--text);
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:var(--primary);
+
+}
+
+/* underline animation */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.25s;
+
+}
+
+nav a:hover::after{
+
+    width:100%;
+
+}
 :root{
 
     --primary:#2563eb;
