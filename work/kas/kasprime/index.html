@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KASPrime | Shahin Shah</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<a href="../../../">Shahin Shah</a>
+
+</div>
+
+<nav>
+
+<a href="../../../">Home</a>
+
+<a href="../../../about/">About</a>
+
+<a href="../../">Work</a>
+
+<a href="../">KAS</a>
+
+<a href="../../../contact/">Contact</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<p class="eyebrow">
+
+KAS PROJECT
+
+</p>
+
+<h1>
+
+KASPrime
+
+</h1>
+
+<p class="subtitle">
+
+Search Kerala Administrative Service postings using a simple and powerful interface.
+
+</p>
+
+</section>
+
+<section class="search-panel">
+
+<h2>
+
+Search Postings
+
+</h2>
+
+<div class="search-grid">
+
+<div class="field">
+
+<label>
+
+Search By
+
+</label>
+
+<select id="searchType">
+
+<option value="Officer">Officer</option>
+
+<option value="Department">Department</option>
+
+<option value="District">District</option>
+
+<option value="Designation">Designation</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>
+
+Select
+
+</label>
+
+<select id="searchValue">
+
+<option>
+
+Loading...
+
+</option>
+
+</select>
+
+</div>
+
+<div class="field button-field">
+
+<button id="searchButton">
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="results">
+
+<h2>
+
+Results
+
+</h2>
+
+<table id="resultsTable">
+
+<thead>
+
+<tr>
+
+<th>Officer Name</th>
+
+<th>Designation</th>
+
+<th>Department</th>
+
+<th>District</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr>
+
+<td colspan="4">
+
+No search performed.
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+</main>
+
+<script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
